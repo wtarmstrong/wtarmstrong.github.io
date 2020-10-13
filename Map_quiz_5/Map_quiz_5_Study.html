@@ -144,8 +144,6 @@
 	
 	// Changes "1. _A_" to "1. _A_ Correct!" if A is the answer to question 1, and it removes "Correct!" when incorrect
 	function reportCorrect(qIndex) {
-		console.log("qIndex: " + qIndex);
-		console.log("isAnsCorrect[qIndex - 1]: " + isAnsCorrect[qIndex - 1]);
 		if (isAnsCorrect[qIndex - 1]) {
 			document.getElementById("q" + (qIndex) + " grade").innerHTML = " Correct!";
 		}
