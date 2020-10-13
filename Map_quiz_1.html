@@ -18,16 +18,16 @@
 	<h1>Geography Quiz 1: Foundations of Civilization</h1>
 	<p>Instructions: </p>
 	<ul>
-		<li>Press 1-9, 0 to select a question 1-10</li>
-		<li>Press a-j to select the associated location</li>
+		<li>Press 1 through 9 and 0 to select a question, 0 being question 10</li>
+		<li>Press A through J to select a location</li>
 		<li>Press Enter to pair the selected question with the selected location</li>
 	</ul>
 	<div id="Map">
 		<img id ="map" src="./Images/Base Map.png" alt="Map of Ancient World Civilizations">
 	</div>
 	
-	<p id="Selected Question">Selected Question: <span id="questionText"></span></p>
-	<p id="Selected Location">Selected Location: <span id="locationText"></span></p>
+	<p id="Selected Question"><b>Selected Question: </b><span id="questionText"></span></p>
+	<p id="Selected Location"><b>Selected Location: </b><span id="locationText"></span></p>
 	
 	<div id="quiz">
 		<p id="q1"><span id="q1 num">1. </span><span id="q1 answer">__</span></p>
@@ -51,7 +51,7 @@
 	var locationLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
 	var qNumIds = ["q1 num", "q2 num", "q3 num", "q4 num", "q5 num", "q6 num", "q7 num", "q8 num", "q9 num", "q10 num"];
 	var qNumDefault = ["1. ", "2. ", "3. ", "4. ", "5. ", "6. ", "7. ", "8. ", "9. ", "10. "]
-	var qAnsIds = ["", "q1 answer", "q2 answer", "q3 answer", "q4 answer", "q5 answer", "q6 answer", "q7 answer", "q8 answer", "q9 answer", "q10 answer"];
+	var qAnsIds = ["q1 answer", "q2 answer", "q3 answer", "q4 answer", "q5 answer", "q6 answer", "q7 answer", "q8 answer", "q9 answer", "q10 answer"];
 	var qAnsDefault = "__";
 	var mapSrcs = ["./Images/Base Map.png", "./Images/A Selected.png", "./Images/B Selected.png", 
 		"./Images/C Selected.png", "./Images/D Selected.png", "./Images/E Selected.png", "./Images/F Selected.png", 
@@ -271,24 +271,12 @@
 			
 			case 13: // Enter
 				if (selectedQuestion != 0) {
-					switch (selectedQuestion) {
-						case 0:
-							document.getElementById(qAnsIds[selectedQustion]).innerHTML = qAnsDefault;
-							break;
-						case 1:
-						case 2:
-						case 3:
-						case 4:
-						case 5:
-						case 6:
-						case 7:
-						case 8:
-						case 9:
-						case 10:
-							document.getElementById(qAnsIds[selectedQuestion]).innerHTML = "_" + locationLetters[selectedLocation - 1] + "_";
-							break;
-						default:
-							break;
+					if (selectedLocation == 0) {
+						document.getElementById(qAnsIds[selectedQuestion - 1]).innerHTML = qAnsDefault;
+					}
+					else {
+						document.getElementById(qAnsIds[selectedQuestion - 1]).innerHTML = 
+							"_" + locationLetters[selectedLocation - 1] + "_";
 					}
 				}
 			
