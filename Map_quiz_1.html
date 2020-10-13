@@ -16,6 +16,12 @@
 
 <body>
 	<h1>Geography Quiz 1: Foundations of Civilization</h1>
+	<p>Instructions: </p>
+	<ul>
+		<li>Press 1-9, 0 to select a question 1-10</li>
+		<li>Press a-j to select the associated location</li>
+		<li>Press Enter to pair the selected question with the selected location</li>
+	</ul>
 	<div id="Map">
 		<img id ="map" src="./Images/Base Map.png" alt="Map of Ancient World Civilizations">
 	</div>
@@ -43,7 +49,7 @@
 	var selectedLocation = 0;
 	
 	var locationLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
-	var qNumIds = ["q1 num", "q2 num", "q3 num", "q4 num", "q5 num", "q6 num", "q7 num", "q8 num", "q9 num", "q10 num", ];
+	var qNumIds = ["q1 num", "q2 num", "q3 num", "q4 num", "q5 num", "q6 num", "q7 num", "q8 num", "q9 num", "q10 num"];
 	var qNumDefault = ["1. ", "2. ", "3. ", "4. ", "5. ", "6. ", "7. ", "8. ", "9. ", "10. "]
 	var qAnsIds = ["", "q1 answer", "q2 answer", "q3 answer", "q4 answer", "q5 answer", "q6 answer", "q7 answer", "q8 answer", "q9 answer", "q10 answer"];
 	var qAnsDefault = "__";
@@ -53,16 +59,16 @@
 	var mapAlts = ["Map of Ancient World Civilizations", "Location A Selected", "Location B Selected", 
 		"Location C Selected", "Location D Selected", "Location E Selected", "Location F Selected", 
 		"Location G Selected", "Location H Selected", "Location I Selected", "Location J Selected"];
-	var questionText = ["No question is selected", "China", "Sumer", "Indus civilization", "Egypt", 
-		"Arabian Sea, the bodu of water into which the Indus River flows", 
-		"Yellow Sea, the body of water into which the Huang and Chang rivers flow",
-		"Mediterranean Sea, the body of water into which the Nile River flows",
-		"Himalayas, the high mountains that form the northern border of the Indus Valley",
-		"Libyan Desert, which forms the western border of the Nile Valley",
-		"Persian Gulf, the body of water into which the Tigris and Euphrates rivers flow"];
+	var questionText = ["No question is selected", "1. China", "2. Sumer", "3. Indus civilization", "4. Egypt", 
+		"5. Arabian Sea, the bodu of water into which the Indus River flows", 
+		"6. Yellow Sea, the body of water into which the Huang and Chang rivers flow",
+		"7. Mediterranean Sea, the body of water into which the Nile River flows",
+		"8. Himalayas, the high mountains that form the northern border of the Indus Valley",
+		"9. Libyan Desert, which forms the western border of the Nile Valley",
+		"10. Persian Gulf, the body of water into which the Tigris and Euphrates rivers flow"];
 	var locationText = [ "No location is selected",
 		"A is a region in the middle of the western edge of the map.",
-		"B is a small region near the middile of the western half of the map.", 
+		"B is a small region near the middle of the western half of the map.", 
 		"C is a larger region near the center of the map, slightly to the northeast.",
 		"D is a very large region in the northeast portion of the map.",
 		"E is a body of water in the northwest portion of the map.",
@@ -71,8 +77,6 @@
 		"H is a large body of water near the center of the map, slightly to the southwest.",
 		"I is a region close to the western edge of the map",
 		"J is a region near the center of the map."]
-	
-	
 	
 	window.addEventListener("keydown", onKeyDown);
 	
