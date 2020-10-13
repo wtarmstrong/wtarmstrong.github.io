@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<!--  -->
+<head>
+<meta charset="utf-8">
+	<meta name="veiwport" content="width=device.width, initial-scale=1">
+	<title>Map 5: The Roman World</title>
+</head>
+
+<style>
+	* {
+		font-family: sans-serif;
+		font-size: 30px;
+	}
+	
+	.bolded {
+		font-weight: bold;
+	}
+</style>
+
+<body>
+	<h1>Geography Quiz 5: Ancient Rome and the Rise of Christianity</h1>
+	<p><span id="modeIndicator"></span> Instructions:</p>
+	<ul>
+		<li>Press 1 through 9 and 0 to select a question, 0 being question 10</li>
+		<li>Press A through J to select a location</li>
+		<li>Press Enter to pair the selected question with the selected location</li>
+	</ul>
+	<div id="Map">
+		<img id ="map" src="./Images/Base Map.png" alt="Map of Ancient World Civilizations">
+	</div>
+	
+	<p id="Selected Question"><b>Selected Question: </b><span id="questionText"></span></p>
+	<p id="Selected Location"><b>Selected Location: </b><span id="locationText"></span></p>
+	
+	<div id="quiz">
+		<p id="q1"><span id="q1 num">1. </span>_<span id="q1 answer"></span>_<span id="q1 grade"></span></p>
+		<p id="q2"><span id="q2 num">2. </span>_<span id="q2 answer"></span>_<span id="q2 grade"></span></p>
+		<p id="q3"><span id="q3 num">3. </span>_<span id="q3 answer"></span>_<span id="q3 grade"></span></p>
+		<p id="q4"><span id="q4 num">4. </span>_<span id="q4 answer"></span>_<span id="q4 grade"></span></p>
+		<p id="q5"><span id="q5 num">5. </span>_<span id="q5 answer"></span>_<span id="q5 grade"></span></p>
+		<p id="q6"><span id="q6 num">6. </span>_<span id="q6 answer"></span>_<span id="q6 grade"></span></p>
+		<p id="q7"><span id="q7 num">7. </span>_<span id="q7 answer"></span>_<span id="q7 grade"></span></p>
+		<p id="q8"><span id="q8 num">8. </span>_<span id="q8 answer"></span>_<span id="q8 grade"></span></p>
+		<p id="q9"><span id="q9 num">9. </span>_<span id="q9 answer"></span>_<span id="q9 grade"></span></p>
+		<p id="q10"><span id="q10 num">10. </span>_<span id="q10 answer"></span>_<span id="q10 grade"></span></p>
+	</div>
+	
+<script>
+	// When this is true, "Correct!" will appear next to correct answers.
+	var studyMode = false; 
+	if (studyMode) { document.getElementById("modeIndicator").innerHTML = "Study Mode"; }
+	else { document.getElementById("modeIndicator").innerHTML = "Quiz Mode"; }
+
+	// 0 means no Question/Location is selected
+	var selectedQuestion = 0;
+	var selectedLocation = 0;
+	
+	var locationLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+	var qAnsIds = ["q1 answer", "q2 answer", "q3 answer", "q4 answer", "q5 answer", "q6 answer", "q7 answer", "q8 answer", "q9 answer", "q10 answer"];
+	
+	// Location of Map image files
+	var mapSrcs = ["./Images/Base Map.png", "./Images/A Selected.png", "./Images/B Selected.png", 
+		"./Images/C Selected.png", "./Images/D Selected.png", "./Images/E Selected.png", "./Images/F Selected.png", 
+		"./Images/G Selected.png", "./Images/H Selected.png", "./Images/I Selected.png", "./Images/J Selected.png"];
+	
+	// Alt text for the map images.
+	var mapAlts = ["Map of Ancient World Civilizations", "Location A Selected", "Location B Selected", 
+		"Location C Selected", "Location D Selected", "Location E Selected", "Location F Selected", 
+		"Location G Selected", "Location H Selected", "Location I Selected", "Location J Selected"];
+	
+	// These next three (questionText, locationText, correctAnswers) are the only variables that need changing between quizzes.
+	var questionText = ["No question is selected", 
+		"1. Macedonia", 
+		"2. Spain", 
+		"3. Asia Minor", 
+		"4. Syria", 
+		"5. Rome", 
+		"6. Numidia, once controlled by Carthage",
+		"7. Egypt, which allied itself with Rome",
+		"8. Gaul, where Julius Caesar won many military victories",
+		"9. Britain, where Hadrian built a wall",
+		"10. Constantinople, the \"New Rome\" Constantine renamed for himself"];
+	var locationText = [ "No location is selected",
+		"A is a large region near the center of the upper-left portion of the map.",
+		"B is a small region near the middle of the right edge of the map.", 
+		"C is a region just to the right of the center of the map.",
+		"D is a region near the bottom-left of the map.",
+		"E is a city just to the left of the center of the map.",
+		"F is a large region near the right side of the map.",
+		"G is a large region near the left side of the map.",
+		"H is a city near the middle of the right half of the map.",
+		"I is a large region near the lower-right portion of the map.",
+		"J is a region in the left are of the top edge of the map."]
+	var correctAnswers = ["C", "G", "F", "B", "E", "D", "I", "A", "J", "H"];
+	// Used to track correct answers when studyMode = true
+	var isAnsCorrect =   [false, false, false, false, false, false, false, false, false, false];
+	
+	
+	window.addEventListener("keydown", onKeyDown);
+	
+	function changeMap(indexNum) {
+		var map = document.getElementById("map");
+		map.src = mapSrcs[indexNum];
+		map.alt = mapAlts[indexNum];
+		document.getElementById("locationText").innerHTML = locationText[indexNum];
+	}
+	
+	function resetMap() {
+		selectedLocation = 0;
+		changeMap(0);
+	}
+	
+	function boldQNum (indexNum) {
+		if (indexNum == 0) { return; }
+		document.getElementById("q" + indexNum + " num").classList.add("bolded");
+	}
+	
+	function changeQuestion(indexNum) {
+		boldQNum(indexNum);
+		document.getElementById("questionText").innerHTML = questionText[indexNum];
+	}
+	
+	function unboldQNum (indexNum) {
+		if (indexNum == 0) { return; }
+		document.getElementById("q" + indexNum + " num").classList.remove("bolded");
+	}
+	
+	function resetQuestion() {
+		selectedQuestion = 0;
+		changeQuestion(0);
+		document.getElementById("questionText").innerHTML = questionText[0];
+	}
+	
+	// Checks given answer against correctAnswers and changes isAnsCorrect to true if correct and false if incorrect.
+	function checkAnswer(qIndex, qAnsIdsIndex) {
+		if (correctAnswers[qIndex - 1] == document.getElementById(qAnsIds[qAnsIdsIndex]).innerHTML) {
+			isAnsCorrect[qIndex - 1] = true;
+		}
+		else {
+			isAnsCorrect[qIndex - 1] = false;
+		}
+	}
+	
+	// Changes "1. _A_" to "1. _A_ Correct!" if A is the answer to question 1, and it removes "Correct!" when incorrect
+	function reportCorrect(qIndex) {
+		console.log("qIndex: " + qIndex);
+		console.log("isAnsCorrect[qIndex - 1]: " + isAnsCorrect[qIndex - 1]);
+		if (isAnsCorrect[qIndex - 1]) {
+			document.getElementById("q" + (qIndex) + " grade").innerHTML = " Correct!";
+		}
+		else {
+			document.getElementById("q" + (qIndex) + " grade").innerHTML = "";
+		}
+	}
+	
+	function onKeyDown(event) {
+		switch (event.keyCode) {
+			// Selecting the active question with 1-9,0
+			case 49: // 1
+				unboldQNum(selectedQuestion);
+				if (selectedQuestion == 1) { resetQuestion(); }
+				else {
+					selectedQuestion = 1;
+					changeQuestion(1);
+				}
+				break;
+			case 50: // 2
+				unboldQNum(selectedQuestion);
+				if (selectedQuestion == 2) { resetQuestion(); }
+				else {
+					selectedQuestion = 2;
+					changeQuestion(2);
+				}
+				break;
+			case 51: // 3
+				unboldQNum(selectedQuestion);
+				if (selectedQuestion == 3) { resetQuestion(); }
+				else {
+					selectedQuestion = 3;
+					changeQuestion(3);
+				}
+				break;
+			case 52: // 4
+				unboldQNum(selectedQuestion);
+				if (selectedQuestion == 4) { resetQuestion(); }
+				else {
+					selectedQuestion = 4;
+					changeQuestion(4);
+				}
+				break;
+			case 53: // 5
+				unboldQNum(selectedQuestion);
+				if (selectedQuestion == 5) { resetQuestion(); }
+				else {
+					selectedQuestion = 5;
+					changeQuestion(5);
+				}
+				break;
+			case 54: // 6
+				unboldQNum(selectedQuestion);
+				if (selectedQuestion == 6) { resetQuestion(); }
+				else {
+					selectedQuestion = 6;
+					changeQuestion(6);
+				}
+				break;
+			case 55: // 7
+				unboldQNum(selectedQuestion);
+				if (selectedQuestion == 7) { resetQuestion(); }
+				else {
+					selectedQuestion = 7;
+					changeQuestion(7);
+				}
+				break;
+			case 56: // 8
+				unboldQNum(selectedQuestion);
+				if (selectedQuestion == 8) { resetQuestion(); }
+				else {
+					selectedQuestion = 8;
+					changeQuestion(8);
+				}
+				break;
+			case 57: // 9
+				unboldQNum(selectedQuestion);
+				if (selectedQuestion == 9) { resetQuestion(); }
+				else {
+					selectedQuestion = 9;
+					changeQuestion(9);
+				}
+				break;
+			case 48: // 0, but I'm using it to mean 10
+				unboldQNum(selectedQuestion);
+				if (selectedQuestion == 10) { resetQuestion(); }
+				else {
+					selectedQuestion = 10;
+					changeQuestion(10);
+				}
+				break;
+			
+			// Selecting the active location with a-j
+			case 65: // a
+				if (selectedLocation == "1") { resetMap(); }
+				else {
+					selectedLocation = "1";
+					changeMap(1);
+				}
+				break;
+			case 66: // b
+				if (selectedLocation == "2") { resetMap(); }
+				else {
+					selectedLocation = "2";
+					changeMap(2);
+				}
+				break;
+			case 67: // c
+				if (selectedLocation == "3") { resetMap(); }
+				else {
+					selectedLocation = "3";
+					changeMap(3);
+				}
+				break;
+			case 68: // d
+				if (selectedLocation == "4") { resetMap(); }
+				else {
+					selectedLocation = "4";
+					changeMap(4);
+				}
+				break;
+			case 69: // e
+				if (selectedLocation == "5") { resetMap(); }
+				else {
+					selectedLocation = "5";
+					changeMap(5);
+				}
+				break;
+			case 70: // f
+				if (selectedLocation == "6") { resetMap(); }
+				else {
+					selectedLocation = "6";
+					changeMap(6);
+				}
+				break;
+			case 71: // g
+				if (selectedLocation == "7") { resetMap(); }
+				else {
+					selectedLocation = "7";
+					changeMap(7);
+				}
+				break;
+			case 72: // h
+				if (selectedLocation == "8") { resetMap(); }
+				else {
+					selectedLocation = "8";
+					changeMap(8);
+				}
+				break;
+			case 73: // i
+				if (selectedLocation == "9") { resetMap(); }
+				else {
+					selectedLocation = "9";
+					changeMap(9);
+				}
+				break;
+			case 74: // j
+				if (selectedLocation == "10") { resetMap(); }
+				else {
+					selectedLocation = "10";
+					changeMap(10);
+				}
+				break;
+			
+			case 13: // Enter
+				if (selectedQuestion != 0) {
+					if (selectedLocation == 0) {
+						document.getElementById(qAnsIds[selectedQuestion - 1]).innerHTML = "";
+					}
+					else {
+						document.getElementById(qAnsIds[selectedQuestion - 1]).innerHTML = 
+							locationLetters[selectedLocation - 1];
+					}
+					if (studyMode) {
+						checkAnswer(selectedQuestion, selectedQuestion - 1);
+						reportCorrect(selectedQuestion);
+					}
+				}
+			
+			default: // Key pressed was not on list (0-9, a-j, Enter)
+				break;
+			}
+	}
+</script>
+
+</body>
+
+
+
+</html>
