@@ -18,15 +18,37 @@
 	<p>Map Links</p>
 
 	<ul>
-		<li> <a href="Map_quiz_1/Map_quiz_1.html">Map Quiz 1</a>
-		<li> <a href="Map_quiz_5/Map_quiz_5.html">Map Quiz 5 (Quiz Mode)</a>
-		<li> <a href="Map_quiz_5/Map_quiz_5_Study.html">Map Quiz 5 (Study Mode)</a>
-		<li> <a href="Map_quiz_6/Map_quiz_6.html">Map Quiz 6 (Quiz Mode)</a>
-		<li> <a href="Map_quiz_6/Map_quiz_6_Study.html">Map Quiz 6 (Study Mode)</a>
-    <li> <a href="Map_quiz_6/Map_6_Textbook_Map.html">Map Quiz 6 Textbook Map</a>
-    <li> <a href="Map_quiz_7/Map_quiz_7.html">Map Quiz 7</a>
-    <li> <a href="Map_quiz_7/Map_quiz_7_Maps.html">Map Quiz 7 Maps</a>
+    <li> <a href="Map_quiz_8/Map_quiz_8.html">Map Quiz 8</a>
+    <li> <a href="Map_quiz_8/Map_quiz_8_Maps.html">Map Quiz 8 Map</a>
 	</ul>
 
+  <button onclick="pastQuiz()" id="oldQuizBtn">See past quizzes</button>
+  
+  <ul id="oldList" style="display: none; list-style-type: disc;">
+    <li> <a href="Map_quiz_1/Map_quiz_1.html">Quiz 1</a>
+    <li> <a href="Map_quiz_5/Map_quiz_5.html">Quiz 5</a>
+    <li> <a href="Map_quiz_5/Map_quiz_5_Study.html">Quiz 5 - Study</a>
+    <li> <a href="Map_quiz_6/Map_quiz_6.html">Quiz 6</a>
+    <li> <a href="Map_quiz_6/Map_quiz_6_Study.html">Quiz 6 - Study</a>
+    <li> <a href="Map_quiz_6/Map_6_Textbook_Map.html">Quiz 6 Map</a>
+    <li> <a href="Map_quiz_7/Map_quiz_7.html">Quiz 7</a>
+    <li> <a href="Map_quiz_7/Map_quiz_7_Maps.html">Quiz 7 Map</a>
+  </ul>
+  
+  <script>
+    function pastQuiz() {
+      var btn = document.getElementById("oldQuizBtn");
+      var oldUl = document.getElementById("oldList");
+      
+      if (oldUl.style.display == "none") {
+        oldUl.style.display = "list-item";
+        btn.innerHTML = "Remove past quizzes";
+      } 
+      else {
+        oldUl.style.display = "none";
+        btn.innerHTML = "See past quizzes";
+      }
+    }
+  </script>
 </body>
 </html>

@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz 8 Map</title>
+  
+  <style>
+    .studyMap {
+      border: 2px solid;
+      margin-bottom: 5px;
+      position: relative;
+    }
+    #studyMap1 {
+      width: 842px;
+      height: 658px;
+    }
+    .absPos {
+      position: absolute;
+    }
+    .mapText {
+      font-family: sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      user-select: all;
+      cursor: pointer;
+      backdrop-filter: blur(0.5px);
+      -webkit-backdrop-filter: blur(0.5px);
+      -webkit-text-stroke: 0.5px white;
+    }
+    
+    /* Map from page 257 */
+    #Byzantine {
+      transform: rotate(-8deg);
+      left: 490px;
+      top: 420px;
+    }
+    #Constantinople {
+      transform: rotate(-13deg);
+      left: 625px;
+      top: 355px;
+    }
+    #Córdoba {
+      transform: rotate(10deg);
+      left: 81px;
+      top: 435px;
+    }
+    #England {
+      transform: rotate(9deg);
+      left: 165px;
+      top: 161px;
+    }
+    #France {
+      transform: rotate(7deg);
+      left: 175px;
+      top: 275px;
+    }
+    #HRE {
+      transform: rotate(2deg);
+      left: 305px;
+      top: 215px;
+      /* Multi-line */
+      width: 75px;
+      height: 100px;
+      text-align: center;
+      line-height: 27px;
+    }
+    #Jerusalem {
+      transform: rotate(-20deg);
+      left: 775px;
+      top: 520px;
+    }
+    #Sicily {
+      left: 390px;
+      top: 415px;
+      transform: rotate(-3deg);
+      /* Multi-line */
+      width: 85px;
+      height: 45px;
+      text-align: center;
+      line-height: 15px;
+    }
+    #Rome {
+      left: 315px;
+      top: 385px;
+      transform: rotate(2deg);
+    }
+    #Venice {
+      left: 310px;
+      top: 298px;
+      transform: rotate(1deg);
+    }
+    
+  </style>
+</head>
+
+<body>
+  <p style="font-family: sans-serif; font-size: 30px; margin-bottom: 1px; user-select: all;">Map from page 257</p>
+  <p style="font-family: sans-serif; font-size: 30px; margin: 1px; user-select: all; width: 850px;">The font on the original version of this map was very small, so the text on this map is in 18 point font instead of the normal 30 point font. Please zoom in as necessary.</p>
+  <div id="studyMap1" class="studyMap">
+    <img id="studyImg1" class="absPos" src="Images/p257_001.png">
+    <!-- Page 257 map -->
+    <p id="Byzantine" class="absPos mapText">BYZANTINE EMPIRE</p>
+    <p id="Constantinople" class="absPos mapText">Constantinople</p>
+    <p id="Córdoba" class="absPos mapText">Córdoba</p>
+    <p id="England" class="absPos mapText">ENGLAND</p>
+    <p id="France" class="absPos mapText">FRANCE</p>
+    <p id="HRE" class="absPos mapText">HOLY ROMAN EMPIRE</p>
+    <p id="Jerusalem" class="absPos mapText">Jerusalem</p>
+    <p id="Sicily" class="absPos mapText">KINGDOM
+    OF
+    SICILY</p>
+    <p id="Rome" class="absPos mapText">Rome</p>
+    <p id="Venice" class="absPos mapText">Venice</p>
+  </div>
+  
+</body>
+</html>
