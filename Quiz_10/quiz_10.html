@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="../quizzes.css">
+  
+  <!-- Title is changed by quizzes.js to the tabTitle variable in quiz_9.js. -->
+  <title id="pageTitle">Map</title>
+ </head>
+
+ <body>
+  <!-- This header is changed by quizzes.js to the text in quiz_9.js's quizHeader variable. -->
+  <h1 id="quizName">Geography Quiz</h1>
+  
+  <p>Instructions</p>
+  <ul>
+    <li>Press 1 through 9 and 0 to select a question, 0 being question 10</li>
+    <li>Press A through J to select a location</li>
+    <li>Press Enter to pair the selected question with the selected location</li>
+  </ul>
+  
+  <!-- This div holds the map image and the overlaying image of the selected location. -->
+  <!-- imageWrapper class is general; mapSizer is quiz specific -->
+  <div id="mapContainer" class="imageWrapper mapSizer">
+    <img id="baseMap" class="overlayImage" src="Images/Base Map.png" slt="Base Map">
+    <img id="selLoc" class="overlayImage" src="" alt="">
+  </div>
+  
+  <!-- The text here will change to display the text associated with whichever question/location is selected. The easySelect class is used to select the element's text with one click to aid with using a screen-reader program. -->
+  <p class="easySelect"><span class="bolded">Selected Question: </span><span id="selQText">No question is selected</span></p>
+  <p class="easySelect"><span class="bolded">Selected Location: </span><span id="selLText">No location is selected</span></p>
+  
+  <!-- This ul holds the blanks for each question. The li elements are created in the general JS file under the comment "Creating list for student's answers".  -->
+  <ul id="ansList">
+  </ul>
+ 
+ <!-- Link to individual JS file; this is where most of the changes are made for each quiz. -->
+ <script src="quiz_10.js"></script>
+ <!-- Link to general JS file; this is where the actual functionality of the quizzes is. -->
+ <script src="../quizzes.js"></script>
+ </body>
+</html>

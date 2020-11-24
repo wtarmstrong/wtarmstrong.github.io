@@ -1,0 +1,26 @@
+* {
+  font-family: sans-serif;
+  font-size: 30px;
+}
+
+.bolded {
+  font-weight: bold;
+}
+
+.imageWrapper {
+  position: relative;
+  border: black solid 3px;
+}
+
+.overlayImage {
+  position: absolute;
+  top: 0px;
+}
+
+.easySelect {
+  user-select: all;
+}
+
+p {
+  margin: 10px;
+}

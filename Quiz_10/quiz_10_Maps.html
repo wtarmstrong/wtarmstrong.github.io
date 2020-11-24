@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz 10 Map</title>
+  
+  <style>
+    .studyMap {
+      border: 2px solid;
+      margin-bottom: 5px;
+      position: relative;
+    }
+    #studyMap1 {
+      width: 889px;
+      height: 507px;
+    }
+    .absPos {
+      position: absolute;
+    }
+    .mapText {
+      font-family: sans-serif;
+      font-size: 15px;
+      font-weight: bold;
+      user-select: all;
+      cursor: pointer;
+      backdrop-filter: blur(1.5px);
+      -webkit-backdrop-filter: blur(1.5px);
+      -webkit-text-stroke: 0.5px white;
+    }
+    
+    /* Map from page 315 */
+    #Arabia {
+      left: 570px;
+      top: 330px;
+    }
+    #Baghdad {
+      left: 578px;
+      top: 210px;
+    }
+    #Byzantine {
+      left: 320px;
+      top: 110px;
+    }
+    #Cairo {
+      left: 440px;
+      top: 250px;
+    }
+    #Cordoba {
+      left: 60px;
+      top: 150px;
+    }
+    #Damascus {
+      left: 495px;
+      top: 210px;
+    }
+    #Egypt {
+      left: 410px;
+      top: 270px;
+    }
+    #Mecca {
+      left: 528px;
+      top: 342px;
+    }
+    #Persian {
+      left: 695px;
+      top: 215px;
+      width: 70px;
+      text-align: center;
+    }
+    #Spain {
+      left: 60px;
+      top: 135px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <p style="font-family: sans-serif; font-size: 30px; margin-bottom: 1px; user-select: all;">Map from page 315</p>
+  <p style="font-family: sans-serif; font-size: 30px; margin: 1px; user-select: all; width: 850px;"></p>
+  <div id="studyMap1" class="studyMap">
+    <img id="studyImg1" class="absPos" src="Images/p315_001.png">
+    <!-- Page 315 -->
+    <p id="Arabia" class="absPos mapText">ARABIA</p>
+    <p id="Baghdad" class="absPos mapText">Baghdad</p>
+    <p id="Byzantine" class="absPos mapText">Byzantine</p>
+    <p id="Cairo" class="absPos mapText">Cairo</p>
+    <p id="Cordoba" class="absPos mapText">Cordoba</p>
+    <p id="Damascus" class="absPos mapText">Damascus</p>
+    <p id="Egypt" class="absPos mapText">EGYPT</p>
+    <p id="Mecca" class="absPos mapText">Mecca</p>
+    <p id="Persian" class="absPos mapText">PERSIAN EMPIRE</p>
+    <p id="Spain" class="absPos mapText">SPAIN</p>
+  </div>
+  
+</body>
+</html>

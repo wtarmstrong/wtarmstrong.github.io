@@ -1,0 +1,46 @@
+To setup files for a new quiz, there are # steps.
+- Prep: Have access to the quiz's PDF file and complete the quiz.
+1. Create file location for the new quiz
+2. Edit the "quiz_#.html" and "quiz_#.js" files
+3. Create images for the base map and the locations
+4. Edit the "index.html" file to include the new quiz
+5. Upload the "Quiz_#" folder and the "index.html" file to https://github.com/wtarmstrong/wtarmstrong.github.io
+
+For more precise instruction:
+
+1. Create file location for the new quiz
+  A. If you do not have access to the "Quiz_0 (Template)" folder, then a copy can be accessed from "https://github.com/wtarmstrong/wtarmstrong.github.io". You can either download the whole repository as a ZIP file or you can manually access the individual files by clicking the "Quiz_0 (Template)" folder, then the file you are interested in, then copy&paste-ing into a blank file.
+  B. Create a new folder for the new quiz. I use the simple naming scheme of "Quiz_#", but you can use whatever method you want as long as you properly refence it when you make changes to the "index.HTML" file.
+  C. Make a copy of the contents in the "Quiz 0 (Template)" folder and save them in the new folder.
+  D. Rename "quiz_#.html" and "quiz_#.js" by replacing the # with the quiz number.
+
+2. Edit the "quiz_#.html" and "quiz_#.js" files
+  A. Open "quiz_#.html" in an editor. I use Notepad++, but any should work, even Notepad.
+  B. Towards the bottom of the file, change "<script src="quiz_#.js"></script>" by replacing the #.
+  C. Open "quiz_#.js" in an editor.
+  D. This file is where the most changes occur. Enter the necesarry information for each item.
+    - Note: The image dimensions won't be available until you create the "Base Map.png" file.
+  E. Save and close both files.
+
+3. Create images for the base map and the locations
+  - These steps will probably take some time; it will be faster the more familiar you are with creating images.
+  A. Use a screenshot to capture the map from the quiz. Save the image as "Base Map.png".
+  B. Using Photoshop (or Photopea like me because $), open the "Base Map.png" file.
+  C. Create PNG files for each location on the quiz.
+    - How you do this is up to you, but I'll list my steps here.
+    1. Create three Layer Folders named "Whiteout", "Locations", and "Labels".
+      - The order should be Labels, Locations, Whiteout, Base Map.
+    2. In the "Whiteout" folder, create 11 layers, 1 for each location plus 1 for general touchups. Use the Brush tool with white coloring to whiteout the labels of each location. This allows me to make clear labels and reposition them if necessary.
+    3. In the "Labels" folder, create a Text layer for each Letter on the map (A through J). If the letter represents a city, add another layer and use the brush tool or circle shape tool to add a black circle over the city marker.
+    4. In the "Locations" folder, create a Shape by using the Pen tool to show each location's area. If the location is a city, make a box around the label and the dot.
+    5. Set each shape in the label folder to have a Bright Yellow fill and a noticeable (but not massive) solid, black border.
+    6. Create PNGs for each location by toggling off every layer except for the Location and the Label (and the city dot if applicable). Then use File > Export As > PNG to create the image for each location.
+    7. Rename each file to follow the pattern of "_ Selected.png". (e.g. the image for A would be "A Selected.png".)
+  D.  Move each of these files (there should be 10) and the "Base Map.png" file to the "Images" folder in the new "Quiz_#" folder.
+
+4. Edit the "index.html" file to include the new quiz
+  A. Copy&Paste the previous quiz items into the past quiz area
+  B. Edit the names and file locations to reflect the new quiz
+
+5. Upload the "Quiz_#" folder and the "index.html" file to https://github.com/wtarmstrong/wtarmstrong.github.io
+  - If you are not updating my site and are making your own, upload to the repository that is associated with your Github Pages site.
