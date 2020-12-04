@@ -20,11 +20,16 @@ for (var i = 0; i < 10; i++) {
   ansList.appendChild(newQ);
 }
 
+// Adjusting area coordinates for image map "imgClick"
+for (var i = 0; i < 10; i++) {
+  document.getElementById("map" + i).coords = mapDimension[i];
+}
+
 /***********
  * Classes *
  ***********/
  
- // These classes are currently only used to store info.
+// These classes are currently only used to store info.
 
 // Class for storing Location information
 class Location {
@@ -48,7 +53,7 @@ class Question {
  * Variables: Location and Question Arrays *
  *******************************************/
 
-// Location instance will be stored here with 'A' at index 0.
+// Location instances will be stored here with 'A' at index 0.
 var locArray = [];
 
 // Populating locArray
@@ -131,12 +136,6 @@ function changeMap (srcText) {
 // Changes selectedLocation to -1 (no location is selected)
 function unSelLoc () { selectedLocation = -1; }
 
-// Changes the value of selectedLocation
-function selLoc (selLocIndex) {
-  if (selLocIndex == selectedLocation) { unSelLoc(); }
-  else { selectedLocation = selLocIndex; }
-}
-
 // Update HTML to reflect selegctedLocation
 function updateSelLoc () {
   if (selectedLocation != -1) {
@@ -149,10 +148,53 @@ function updateSelLoc () {
    }
 }
 
+// Changes the value of selectedLocation
+function selLoc (selLocIndex) {
+  if (selLocIndex == selectedLocation) { unSelLoc(); }
+  else { selectedLocation = selLocIndex; }
+  updateSelLoc();
+}
+
 // Converts keyCode to index for locArray
 function keySelLoc (keyCode) {
   selLoc(keyCode - 65);
 }
+
+// Functions called by image map 
+function mapClick (letter) {
+      switch (letter) {
+        case "A":
+          selLoc(0);
+          break;
+        case "B":
+          selLoc(1);
+          break;
+        case "C":
+          selLoc(2);
+          break;
+        case "D":
+          selLoc(3);
+          break;
+        case "E":
+          selLoc(4);
+          break;
+        case "F":
+          selLoc(5);
+          break;
+        case "G":
+          selLoc(6);
+          break;
+        case "H":
+          selLoc(7);
+          break;
+        case "I":
+          selLoc(8);
+          break;
+        case "J":
+          selLoc(9);
+          break;
+      }
+    }
 
 // Functions: Pairing selectedQuestion with selectedLocation
 function pairSelected () {
@@ -198,7 +240,6 @@ function onKeyDown(event) {
     case 73: // i
     case 74: // j
       keySelLoc(event.keyCode);
-      updateSelLoc();
       break;
     default: // Key not specified above
       break;
