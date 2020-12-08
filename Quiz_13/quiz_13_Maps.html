@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz 13 Map</title>
+  
+  <style>
+    .studyMap {
+      border: 2px solid;
+      margin-bottom: 5px;
+      position: relative;
+    }
+    #studyMap1 {
+      width: 1024px;
+      height: 1041px;
+    }
+    /*#studyMap2 {
+      width: 504px;
+      height: 649px;
+    }*/
+    .absPos {
+      position: absolute;
+    }
+    .mapText {
+      font-family: sans-serif;
+      font-size: 28px;
+      font-weight: bold;
+      user-select: all;
+      cursor: pointer;
+      backdrop-filter: blur(1.5px);
+      -webkit-backdrop-filter: blur(1.5px);
+      -webkit-text-stroke: 0.5px white;
+    }
+    .town {
+      font-size: 23px;
+    }
+    
+    /* Map from page 432 */
+    #England {
+      left: 312px;
+      top: 495px;
+      transform: rotate(11deg);
+    }
+    #Geneva {
+      left: 380px;
+      top: 705px;
+      transform: rotate(7deg);
+    }
+    #Munster {
+      left: 512px;
+      top: 570px;
+      transform: rotate(1deg);
+    }
+    #Norway {
+      left: 510px;
+      top: 270px;
+    }
+    #Rome {
+      left: 525px;
+      top: 850px;
+    }
+    #Scotland {
+      left: 280px;
+      top: 420px;
+      transform: rotate(12deg);
+    }
+    #Spain {
+      left: 220px;
+      top: 850px;
+      transform: rotate(15deg);
+    }
+    #Sweden {
+      left: 620px;
+      top: 320px;
+      transform: rotate(-5deg);
+    }
+    #Trent {
+      left: 510px;
+      top: 740px;
+    }
+    #Wittenberg {
+      left: 602px;
+      top: 580px;
+      transform: rotate(-3deg);
+    }
+    #Worms {
+      left: 430px;
+      top: 630px;
+    }
+  </style>
+</head>
+
+<body>
+  <p style="font-family: sans-serif; font-size: 30px; margin-bottom: 1px; user-select: all;">Map from page 432</p>
+  <div id="studyMap1" class="studyMap">
+    <img id="studyImg1" class="absPos" src="Images/p432_001.jpg">
+    <p id="England" class="absPos mapText">ENGLAND</p>
+    <p id="Geneva" class="absPos mapText town">Geneva</p>
+    <p id="Munster" class="absPos mapText town">Munster</p>
+    <p id="Norway" class="absPos mapText">NORWAY</p>
+    <p id="Rome" class="absPos mapText town">Rome</p>
+    <p id="Scotland" class="absPos mapText">SCOTLAND</p>
+    <p id="Spain" class="absPos mapText">SPAIN</p>
+    <p id="Sweden" class="absPos mapText">SWEDEN</p>
+    <p id="Trent" class="absPos mapText town">Trent</p>
+    <p id="Wittenberg" class="absPos mapText town">Wittenberg</p>
+    <p id="Worms" class="absPos mapText town">Worms</p>
+  </div>
+  
+  <!--<p style="font-family: sans-serif; font-size: 30px; margin: 1px; user-select: all;">Map from page ###</p>
+  <div id="studyMap2" class="studyMap">
+    <img id="studyImg2" class="absPos" src="Images/p###_001.jpg">
+    <p id="" class="absPos mapText"></p>
+  </div>-->
+  
+</body>
+</html>
