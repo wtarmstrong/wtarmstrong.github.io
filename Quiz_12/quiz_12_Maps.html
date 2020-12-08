@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz 12 Map</title>
+  
+  <style>
+    .studyMap {
+      border: 2px solid;
+      margin-bottom: 5px;
+      position: relative;
+    }
+    #studyMap1 {
+      width: 677px;
+      height: 497px;
+    }
+    /*#studyMap2 {
+      width: 504px;
+      height: 649px;
+    }*/
+    .absPos {
+      position: absolute;
+    }
+    .mapText {
+      font-family: sans-serif;
+      font-size: 15px;
+      font-weight: bold;
+      user-select: all;
+      cursor: pointer;
+      backdrop-filter: blur(1.5px);
+      -webkit-backdrop-filter: blur(1.5px);
+      -webkit-text-stroke: 0.5px white;
+    }
+    
+    /* Map from page 342 */
+    #Angkor {
+      left: 345px;
+      top: 170px;
+      width: 50px;
+      text-align: right;
+      line-height: 15px;
+    }
+    #Borneo {
+      left: 485px;
+      top: 347px;
+    }
+    #China {
+      left: 469px;
+      top: 37px;
+    }
+    #ThaiGulf {
+      left: 340px;
+      top: 220px;
+      width: 40px;
+      text-align: center;
+      line-height: 12px;
+    }
+    #India {
+      left: 175px;
+      top: 45px;
+    }
+    #Java {
+      left: 445px;
+      top: 425px;
+    }
+    #Pagan {
+      left: 235px;
+      top: 95px;
+    }
+    #Malacca {
+      left: 280px;
+      top: 295px;
+      transform: rotate(50deg);
+    }
+    #Sumatra {
+      left: 330px;
+      top: 355px;
+      transform: rotate(50deg);
+    }
+    #Sunda {
+      left: 420px;
+      top: 405px;
+    }
+    
+    
+  </style>
+</head>
+
+<body>
+  <p style="font-family: sans-serif; font-size: 30px; margin-bottom: 1px; user-select: all;">Map from page 398</p>
+  <div id="studyMap1" class="studyMap">
+    <img id="studyImg1" class="absPos" src="Images/p398_001.png">
+    <p id="Angkor" class="absPos mapText">Angkor Wat</p>
+    <p id="Borneo" class="absPos mapText">Borneo</p>
+    <p id="China" class="absPos mapText">CHINA</p>
+    <p id="ThaiGulf" class="absPos mapText">Gulf of Thailand</p>
+    <p id="India" class="absPos mapText">INDIA</p>
+    <p id="Java" class="absPos mapText">Java</p>
+    <p id="Pagan" class="absPos mapText">Pagan</p>
+    <p id="Malacca" class="absPos mapText">Strait of Malacca</p>
+    <p id="Sumatra" class="absPos mapText">Sumatra</p>
+    <p id="Sunda" class="absPos mapText">Sunda Strait</p>
+  </div>
+  
+  <!--<p style="font-family: sans-serif; font-size: 30px; margin: 1px; user-select: all;">Map from page ###</p>
+  <div id="studyMap2" class="studyMap">
+    <img id="studyImg2" class="absPos" src="Images/p###_001.jpg">
+    <p id="" class="absPos mapText"></p>
+  </div>-->
+  
+</body>
+</html>
