@@ -15,4 +15,4 @@ This webpage method allows several benefits that greatly improve the student's p
 The quizzes and maps are from the course associated with Prentice Hall's World History textbook; its 13-digit ISBN is 978-0-13-365191-1. The base map images were scanned from the worksheets, and the colored reference maps were downloaded from bookshare.org's digital version of the textbook.
 
 ## Other
-If there are ever any unecesary files in this repository, they are likely not deleted as my work comupter's permissions only allow me to access the repository through github.com, and the website only allows me to delete files individually. If you wish to contact me about this repository, I can be reached at wtarmstong@sps.mail.org as long as I am still employed here as a paraprofessional.
+If there are ever any unecesary files in this repository, they are likely not deleted as my work comupter's permissions only allow me to access the repository through github.com, and the website only allows me to delete files individually. If you wish to contact me about this repository, I can be reached at wtarmstong@sps.mail.org as long as I am still employed here.
