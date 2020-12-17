@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz 14 Map</title>
+  
+  <style>
+    .studyMap {
+      border: 3px solid;
+      margin-top: 0px;
+      margin-bottom: 5px;
+      position: relative;
+    }
+    #studyMap1 {
+      width: 1024px;
+      height: 786px;
+    }
+    .absPos {
+      position: absolute;
+    }
+    .mapText {
+      //font-family: sans-serif;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 28px;
+      //font-weight: bold;
+      user-select: all;
+      cursor: pointer;
+      backdrop-filter: blur(1.5px);
+      -webkit-backdrop-filter: blur(1.5px);
+      //-webkit-text-stroke: 0.5px white;
+    }
+    
+    /* Map from page 447 */
+    #Calicut {
+      left: 662px;
+      top: 520px;
+      font-size: 13px;
+    }
+    #Cape {
+      left: 457px;
+      top: 696px;
+      font-size: 11px;
+      font-style: italic;
+      width: 60px;
+      text-align: center;
+    }
+    #Columbus {
+      left: 579px;
+      top: 354px;
+      font-size: 14px;
+    }
+    #Gama {
+      left: 580px;
+      top: 322px;
+      font-size: 14px;
+    }
+    #Dias {
+      left: 581px;
+      top: 304px;
+      font-size: 14px;
+    }
+    #Line {
+      left: 265px;
+      top: 680px;
+      font-size: 12px;
+      transform: rotate(270deg);
+    }
+    #Magellan {
+      left: 581px;
+      top: 388px;
+      font-size: 13px;
+    }
+    #Moluccas {
+      left: 825px;
+      top: 548px;
+      font-size: 12px;
+      font-style: italic;
+    }
+    #Philippine {
+      left: 804px;
+      top: 508px;
+      font-size: 11px;
+      font-style: italic;
+      width: 50px;
+      text-align: center;
+    }
+    #West {
+      left: 168px;
+      top: 509px;
+      font-size: 14px;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="studyMap1" class="studyMap">
+    <img id="studyImg1" class="absPos" src="Images/p447_001.jpg">
+    <p id="Calicut" class="absPos mapText">Calicut</p>
+    <p id="Cape" class="absPos mapText">Cape of Good Hope</p>
+    <p id="Columbus" class="absPos mapText">Columbus</p>
+    <p id="Gama" class="absPos mapText">Da Gama</p>
+    <p id="Dias" class="absPos mapText">Dias</p>
+    <p id="Line" class="absPos mapText">Line of Demarcation</p>
+    <p id="Magellan" class="absPos mapText">Magellan</p>
+    <p id="Moluccas" class="absPos mapText">Moluccas</p>
+    <p id="Philippine" class="absPos mapText">Philippine Islands</p>
+    <p id="West" class="absPos mapText">West Indies</p>
+  </div>
+  
+  <p style="user-select: all; font-family: sans-serif; font-size: 30px;">The map has a legend to help with the routes. It is located to the northeast of the map's center, over where Russia would be on the map. Of the 4 routes that the quiz asks you to find, 2 are teal, and the other 2 are orange. Since the picture is of low quality, I'm listing the routes' descriptions here in alphabetical order.</p>
+  <ul>
+    <li style="user-select: all; font-family: sans-serif; font-size: 30px;"><b>Columbus</b>: From Spain, orange dashed line, crosses the Atlantic to the West Indies.</li>
+    <li style="user-select: all; font-family: sans-serif; font-size: 30px;"><b>Dias</b>: For Portugal, teal dashed line, curves around the west coast of Africa. It begins to return after reaching the Cape of Good Hope.</li>
+    <li style="user-select: all; font-family: sans-serif; font-size: 30px;"><b>Da Gama</b>: For Portugal, teal solid line, wraps around Africa's southern coast to reach Calicut in India.</li>
+    <li style="user-select: all; font-family: sans-serif; font-size: 30px;"><b>Magellan</b>: For Spain, orange dotted line, leaves from Spain, wraps under South America, goes to the left edge and reappears on the right edge, goes through the Philippines and near Moluccas, then goes south of Africa to return to Spain.</li>
+  </ul>
+  
+  <!--<p style="font-family: sans-serif; font-size: 30px; margin: 1px; user-select: all;">Map from page ###</p>
+  <div id="studyMap2" class="studyMap">
+    <img id="studyImg2" class="absPos" src="Images/p###_001.jpg">
+    <p id="" class="absPos mapText"></p>
+  </div>-->
+  
+</body>
+</html>
