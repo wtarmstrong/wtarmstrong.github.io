@@ -10,6 +10,7 @@ This webpage method allows several benefits that greatly improve the student's p
 - With Github Pages, the quizzes are available to the student wherever they have internet access. 
 - Through Photopea.com and Javascript, the locations on the map are selectable which helps to easily show what map items the identifying letters are associated with.
 - Through the student's screenreading software, the question text from the quiz and the location descriptions from me can be heard instead of read.
+- Through CSS, the text on the reference maps could be made accessible to screenreader software.
 
 ### Sources
 The quizzes and maps are from the course associated with Prentice Hall's World History textbook; its 13-digit ISBN is 978-0-13-365191-1. The base map images were scanned from the worksheets, and the colored reference maps were downloaded from bookshare.org's digital version of the textbook.
