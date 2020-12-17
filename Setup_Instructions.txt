@@ -1,15 +1,16 @@
 To setup files for a new quiz, there are # steps.
-- Prep: Have access to the quiz's PDF file and complete the quiz.
+- Prep: Have access to the quiz's PDF file, preferably a high DPI scan of the quiz's worksheet, and access to the answers (I would just use the textbook to find the answers).
 1. Create file location for the new quiz
 2. Edit the "quiz_#.html" and "quiz_#.js" files
 3. Create images for the base map and the locations
+  - At this point, I also create the webpage for the reference map. and add it to the "Quiz_#" folder. Intructions to do this are provided after the "For more precise instruction" section.
 4. Edit the "index.html" file to include the new quiz
 5. Upload the "Quiz_#" folder and the "index.html" file to https://github.com/wtarmstrong/wtarmstrong.github.io
 
 For more precise instruction:
 
 1. Create file location for the new quiz
-  A. If you do not have access to the "Quiz_0 (Template)" folder, then a copy can be accessed from "https://github.com/wtarmstrong/wtarmstrong.github.io". You can either download the whole repository as a ZIP file or you can manually access the individual files by clicking the "Quiz_0 (Template)" folder, then the file you are interested in, then copy&paste-ing into a blank file.
+  A. If you do not have a local copy of the "Quiz_0 (Template)" folder, then a copy can be accessed from "https://github.com/wtarmstrong/wtarmstrong.github.io". You can either download the whole repository as a ZIP file or you can manually access the individual files by clicking the "Quiz_0 (Template)" folder, then the file you are interested in, then copy&paste-ing it into a blank file.
   B. Create a new folder for the new quiz. I use the simple naming scheme of "Quiz_#", but you can use whatever method you want as long as you properly refence it when you make changes to the "index.HTML" file.
   C. Make a copy of the contents in the "Quiz 0 (Template)" folder and save them in the new folder.
   D. Rename "quiz_#.html" and "quiz_#.js" by replacing the # with the quiz number.
@@ -19,23 +20,27 @@ For more precise instruction:
   B. Towards the bottom of the file, change "<script src="quiz_#.js"></script>" by replacing the #.
   C. Open "quiz_#.js" in an editor.
   D. This file is where the most changes occur. Enter the necesarry information for each item.
-    - Note: The image dimensions won't be available until you create the "Base Map.png" file.
+    - Note: Some items won't be available until you create the image files.
   E. Save and close both files.
 
 3. Create images for the base map and the locations
   - These steps will probably take some time; it will be faster the more familiar you are with creating images.
-  A. Use a screenshot to capture the map from the quiz. Save the image as "Base Map.png".
-  B. Using Photoshop (or Photopea like me because $), open the "Base Map.png" file.
-  C. Create PNG files for each location on the quiz.
+  A. Use a screenshot to capture the map from the quiz. Save the image as "Quiz_#.png".
+  B. Using Photoshop (or Photopea like me because $), open the "Quiz_#.png" file.
+  C. Create PNG files for the base map and for each location on the quiz.
     - How you do this is up to you, but I'll list my steps here.
     1. Create three Layer Folders named "Whiteout", "Locations", and "Labels".
-      - The order should be Labels, Locations, Whiteout, Base Map.
+      - The order should be Labels, Locations, Whiteout, Background.
     2. In the "Whiteout" folder, create 11 layers, 1 for each location plus 1 for general touchups. Use the Brush tool with white coloring to whiteout the labels of each location. This allows me to make clear labels and reposition them if necessary.
-    3. In the "Labels" folder, create a Text layer for each Letter on the map (A through J). If the letter represents a city, add another layer and use the brush tool or circle shape tool to add a black circle over the city marker.
-    4. In the "Locations" folder, create a Shape by using the Pen tool to show each location's area. If the location is a city, make a box around the label and the dot.
-    5. Set each shape in the label folder to have a Bright Yellow fill and a noticeable (but not massive) solid, black border.
-    6. Create PNGs for each location by toggling off every layer except for the Location and the Label (and the city dot if applicable). Then use File > Export As > PNG to create the image for each location.
-    7. Rename each file to follow the pattern of "_ Selected.png". (e.g. the image for A would be "A Selected.png".)
+      - If labels are in water areas, copy a section from the Background layer and paste it over the label. This will create another layer; you can create a subfolder to store all whiteout files related to a specific location.
+    3. In the "Labels" folder, create a Text layer for each Letter on the map (A through J). 
+      - If the letter represents a city, add another layer and use the brush tool or circle shape tool to add a black circle over the city marker.
+      - If the location has a line pointing from the letter to the location, either use the line tool or another layer with the brush tool.
+    4. In the "Locations" folder, create a Shape by using the Pen tool to show each location's area. 
+      - If the location is a city, make a box around the label and the dot.
+    5. Set each shape in the Location folder to have a Bright Yellow fill and a noticeable (but not massive) solid, black border (I use 4.0pt stroke).
+    6. Create a PNG file that will be the background image on the webpage. Toggle off the location folder and then File > Export As > PNG. Rename this file as "Base Map.png".
+    7. Create PNGs for each location by toggling off every layer except for the Location layer and the Label layer(s) associated with the location. Then use File > Export As > PNG to create the image for each location. Rename the file to follow the pattern of "_ Selected.png". (e.g. the image for location A would be "A Selected.png".)
   D.  Move each of these files (there should be 10) and the "Base Map.png" file to the "Images" folder in the new "Quiz_#" folder.
 
 4. Edit the "index.html" file to include the new quiz
@@ -44,3 +49,30 @@ For more precise instruction:
 
 5. Upload the "Quiz_#" folder and the "index.html" file to https://github.com/wtarmstrong/wtarmstrong.github.io
   - If you are not updating my site and are making your own, upload to the repository that is associated with your Github Pages site.
+
+
+Creating a reference map page
+Essentially, the purpose of this webpage is to make the textbook's map(s) available to the student. To do that, I place text over the image, so the text can be selected by the student to use with the screenreader software. If you want to earn a gold star for this part, you could do this for all of the text in the image, but I only do this for the text that is relevent to the quiz.
+I might change this later to involve both an HTML file and a CSS file, but for now, I do the styling in the HTML file's <style> section.
+There is a template file named "quiz_0_maps.html" in the "Quiz_0 (Template)" folder for you to start from. If you have any difficulty creating this webpage, please reference the quiz_#_maps.html files from the other quizzes.
+
+Step 1: Create a <p> element for the text that you want to be over the image.
+  - Example: <p id="Location1" class="absPos mapText">Map's text for Location 1</p>
+    - The map's text would replace the "Map's text for Location 1"
+    - The id can be changed to whatever your want, but it should be unique from the other <p> elements' ids.
+Step 2: Edit the CSS in the <style> section of the HTML file.
+  - The two main attributes that you will be modifying are "left" and "top". These specify how far the <p> element should be from the left and top edges respectively.
+  - Other common specification are 
+    - "font-size" for smaller/larger text 
+    - "font-weight: bold" for bolded text
+    - "font-style: italic" for italicized text
+    - "transform: rotate(#deg)" to rotate the text clockwise (use "-#deg" for counterclockwise)
+    - "width: ##px; test-align: center; line-height: #px" for text wrapping on multiple lines
+      - So far, I have only used center, but the "text-align" style can be set to "left" or "right" for those alignments.
+      - The "line-height" attribute may not be necessary, but it is used to control the space between text wrapped to multiple lines
+    - "word-spacing: #px" for spacing between the words
+    - "letter-spacing: #px" for spacing in between letters of a word (Example: "SAHARA" on p. 342 of the textbook)
+Step 2.5: Load the html file in a web browser to ensure that the text looks like how you want it to look.
+Step 3: Repeat for each piece of text you wish to make accessible
+Step 3.5: Repeat for the other maps you wish to include
+Step 4: Upload with the other files in the "Quiz_#" folder
