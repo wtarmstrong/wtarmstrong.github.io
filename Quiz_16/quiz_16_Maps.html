@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz 16 Map</title>
+  
+  <style>
+    .studyMap {
+      border: 3px solid;
+      margin-top: 0px;
+      margin-bottom: 5px;
+      position: relative;
+    }
+    #studyMap1 {
+      width: 1024px;
+      height: 645px;
+    }
+    .absPos {
+      position: absolute;
+    }
+    .mapText {
+      font-family: sans-serif;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 28px;
+      user-select: all;
+      cursor: pointer;
+      backdrop-filter: blur(1.5px);
+      -webkit-backdrop-filter: blur(1.5px);
+      -webkit-text-stroke: 0.5px white;
+    }
+    
+    /* StudyMap1: Map from page 526 */
+    #Austria {
+      left: 456px;
+      top: 384px;
+      font-size: 15px;
+      transform: rotate(-4deg);
+      letter-spacing: -1px;
+      font-weight: bold;
+    }
+    #England {
+      left: 260px;
+      top: 275px;
+      font-size: 14px;
+      transform: rotate(6deg)
+    }
+    #France {
+      left: 301px;
+      top: 403px;
+      font-size: 14px;
+      transform: rotate(4deg);
+      font-weight: bold;
+    }
+    #Ottoman {
+      left: 542px;
+      top: 433px;
+      font-size: 16px;
+      transform: rotate(21deg);
+      letter-spacing: 2px;
+      font-weight: bold;
+      width: 100px;
+      text-align: center;
+    }
+    #Poland {
+      left: 598px;
+      top: 268px;
+      font-size: 14px;
+      transform: rotate(-14deg);
+      font-weight: bold;
+    }
+    #Prussia {
+      left: 537px;
+      top: 233px;
+      font-size: 14px;
+      transform: rotate(-9deg);
+      letter-spacing: -1px;
+      font-weight: bold;
+    }
+    #Russia {
+      left: 723px;
+      top: 160px;
+      font-size: 14px;
+      transform: rotate(-22deg);
+      font-weight: bold;
+    }
+    #Spain {
+      left: 213px;
+      top: 525px;
+      font-size: 14px;
+      transform: rotate(10deg);
+      font-weight: bold;
+    }
+    #Sweden {
+      left: 448px;
+      top: 170px;
+      font-size: 14px;
+      transform: rotate(-2deg);
+      font-weight: bold;
+    }
+    #Swiss {
+      left: 395px;
+      top: 389px;
+      font-size: 11px;
+      font-weight: bold;
+      width: 34px;
+      text-align: center;
+    }
+    */
+  </style>
+</head>
+
+<body>
+  <div id="studyMap1" class="studyMap">
+    <img id="studyImg1" class="absPos" src="Images/p526_001.png">
+    <p id="Austria" class="absPos mapText">AUSTRIA</p>
+    <p id="England" class="absPos mapText">ENGLAND</p>
+    <p id="France" class="absPos mapText">FRANCE</p>
+    <p id="Ottoman" class="absPos mapText">OTTOMAN EMPIRE</p>
+    <p id="Poland" class="absPos mapText">POLAND</p>
+    <p id="Prussia" class="absPos mapText">PRUSSIA</p>
+    <p id="Russia" class="absPos mapText">RUSSIA</p>
+    <p id="Spain" class="absPos mapText">SPAIN</p>
+    <p id="Sweden" class="absPos mapText">SWEDEN</p>
+    <p id="Swiss" class="absPos mapText">SWISS FED.</p>
+  </div>
+</body>
+</html>
