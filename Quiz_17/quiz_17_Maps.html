@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz 17 Map</title>
+  
+  <style>
+    .studyMap {
+      border: 3px solid;
+      margin-top: 0px;
+      margin-bottom: 5px;
+      position: relative;
+    }
+    #studyMap1 {
+      width: 1024px;
+      height: 827px;
+    }
+    
+    .absPos {
+      position: absolute;
+    }
+    .mapText {
+      font-family: sans-serif;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 28px;
+      user-select: all;
+      cursor: pointer;
+      backdrop-filter: blur(1.5px);
+      -webkit-backdrop-filter: blur(1.5px);
+      -webkit-text-stroke: 0.125px white;
+    }
+    
+    /* StudyMap1: Map from page 558 */
+    #Baltimore {
+      left: 717px;
+      top: 427px;
+      font-size: 17px;
+      transform: rotate(-7deg);
+    }
+    #Boston {
+      left: 932px;
+      top: 263px;
+      font-size: 17px;
+      transform: rotate(-10deg);
+    }
+    #Charles {
+      left: 717px;
+      top: 683px;
+      font-size: 17px;
+      transform: rotate(-6deg);
+      word-spacing: 1px;
+    }
+    #Chesapeake {
+      left: 757px;
+      top: 467px;
+      font-size: 16px;
+      transform: rotate(80deg);
+    }
+    #Mississippi {
+      left: 353px;
+      top: 453px;
+      font-size: 18px;
+      transform: rotate(50deg);
+      font-weight: bold;
+    }
+    #NewYork {
+      left: 804px;
+      top: 267px;
+      font-size: 19px;
+      transform: rotate(-9deg);
+      font-weight: bold;
+      width: 40px;
+      text-align: center;
+      line-height: 19px;
+    }
+    #Philadelphia {
+      left: 729px;
+      top: 381px;
+      font-size: 18px;
+      transform: rotate(-7deg);
+    }
+    #Richmond {
+      left: 696px;
+      top: 504px;
+      font-size: 18px;
+      transform: rotate(-6deg);
+    }
+    #Savannah {
+      left: 687px;
+      top: 715px;
+      font-size: 18px;
+      transform: rotate(-6deg);
+    }
+    #Virginia {
+      left: 708px;
+      top: 473px;
+      font-size: 18px;
+      transform: rotate(-6deg);
+      font-weight: bold;
+    }
+    */
+  </style>
+</head>
+
+<body>
+  <div id="studyMap1" class="studyMap">
+    <img id="studyImg1" class="absPos" src="Images/p558_001.png">
+    <p id="Baltimore" class="absPos mapText">Baltimore</p>
+    <p id="Boston" class="absPos mapText">Boston</p>
+    <p id="Charles" class="absPos mapText">Charles Town</p>
+    <p id="Chesapeake" class="absPos mapText">Chesapeake Bay</p>
+    <p id="Mississippi" class="absPos mapText">Mississippi River</p>
+    <p id="NewYork" class="absPos mapText">New York</p>
+    <p id="Philadelphia" class="absPos mapText">Philadelphia</p>
+    <p id="Richmond" class="absPos mapText">Richmond</p>
+    <p id="Savannah" class="absPos mapText">Savannah</p>
+    <p id="Virginia" class="absPos mapText">Virginia</p>
+  </div>
+  <p style="font-size:24px; user-select: all;">Note: No image in chapter 17 of the textbook labelled the Mississippi River nor the Chesapeake Bay, so those two labels were added to this map.</p>
+  
+  <!--
+  <div id="studyMap2" class="studyMap">
+    <img id="studyImg2" class="absPos" src="Images/p###_00#.jpg">
+    <p id="Location2_1" class="absPos mapText">Map's text for Location 1 of Map 2</p>
+    <p id="Location2_2" class="absPos mapText">Map's text for Location 2 of Map 2</p>
+  </div>
+  -->
+  
+</body>
+</html>
