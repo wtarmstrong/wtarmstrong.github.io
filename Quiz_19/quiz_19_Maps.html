@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz # Map</title>
+  
+  <style>
+    .studyMap {
+      border: 3px solid;
+      margin-top: 0px;
+      margin-bottom: 5px;
+      position: relative;
+    }
+    #studyMap1 {
+      width: 425px;
+      height: 512px;
+    }
+    .absPos {
+      position: absolute;
+    }
+    .mapText {
+      font-family: sans-serif;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 28px;
+      user-select: all;
+      cursor: pointer;
+      backdrop-filter: blur(1.5px);
+      -webkit-backdrop-filter: blur(1.5px);
+      -webkit-text-stroke: 0.125px white;
+    }
+    
+    /* StudyMap1: Map from Google search */
+    #Belfast {
+      left: 132px;
+      top: 243px;
+      font-size: 13px;
+    }
+    #Birmingham {
+      left: 219px;
+      top: 359px;
+      font-size: 13px;
+    }
+    #Bristol {
+      left: 248px;
+      top: 410px;
+      font-size: 13px;
+    }
+    #Cardiff {
+      left: 203px;
+      top: 418px;
+      font-size: 13px;
+    }
+    #Edinburgh {
+      left: 260px;
+      top: 181px;
+      font-size: 13px;
+    }
+    #Glasgow {
+      left: 170px;
+      top: 183px;
+      font-size: 13px;
+    }
+    #Liverpool {
+      left: 205px;
+      top: 308px;
+      font-size: 13px;
+    }
+    #London {
+      left: 330px;
+      top: 402px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    #Manchester {
+      left: 282px;
+      top: 310px;
+      font-size: 13px;
+    }
+    #Newcastle {
+      left: 302px;
+      top: 229px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="studyMap1" class="studyMap">
+    <img id="studyImg1" class="absPos" src="Images/UK.jpg">
+    <p id="Belfast" class="absPos mapText">Belfast</p>
+    <p id="Birmingham" class="absPos mapText">Birmingham</p>
+    <p id="Bristol" class="absPos mapText">Bristol</p>
+    <p id="Cardiff" class="absPos mapText">Cardiff</p>
+    <p id="Edinburgh" class="absPos mapText">Edinburgh</p>
+    <p id="Glasgow" class="absPos mapText">Glasgow</p>
+    <p id="Liverpool" class="absPos mapText">Liverpool</p>
+    <p id="London" class="absPos mapText">London</p>
+    <p id="Manchester" class="absPos mapText">Manchester</p>
+    <p id="Newcastle" class="absPos mapText">Newcastle</p>
+  </div>
+</body>
+</html>
