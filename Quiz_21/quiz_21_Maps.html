@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz 21 Map</title>
+  
+  <style>
+    .studyMap {
+      border: 3px solid;
+      margin-top: 0px;
+      margin-bottom: 5px;
+      position: relative;
+    }
+    #studyMap1 {
+      width: 1024px;
+      height: 786px;
+    }
+    .absPos {
+      position: absolute;
+    }
+    .mapText {
+      font-family: sans-serif;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 28px;
+      user-select: all;
+      cursor: pointer;
+      backdrop-filter: blur(1.5px);
+      -webkit-backdrop-filter: blur(1.5px);
+      #-webkit-text-stroke: 0.125px white;
+    }
+    
+    /* StudyMap1: Map from page 661 */
+    #Austria {
+      left: 675px;
+      top: 650px;
+      font-size: 17px;
+      transform: rotate(-2deg);
+    }
+    #Belgium {
+      left: 513px;
+      top: 554px;
+      font-size: 12px;
+      transform: rotate(8deg);
+      font-weight: bold;
+    }
+    #Berlin {
+      left: 665px;
+      top: 508px;
+      font-size: 13px;
+      transform: rotate(3deg);
+    }
+    #France {
+      left: 458px;
+      top: 616px;
+      font-size: 16px;
+      transform: rotate(10deg);
+    }
+    #Germany {
+      left: 620px;
+      top: 527px;
+      font-size: 16px;
+      transform: rotate(2deg);
+    }
+    #GreatB {
+      left: 426px;
+      top: 453px;
+      font-size: 16px;
+      transform: rotate(16deg);
+      font-weight: bold;
+      width: 50px;
+      text-align: center;
+    }
+    #London {
+      left: 457px;
+      top: 511px;
+      font-size: 13px;
+      transform: rotate(12deg);
+    }
+    #Norway {
+      left: 590px;
+      top: 293px;
+      font-size: 16px;
+      transform: rotate(7deg);
+      font-weight: bold;
+    }
+    #Paris {
+      left: 480px;
+      top: 580px;
+      font-size: 13px;
+      transform: rotate(10deg);
+    }
+    #Spain {
+      left: 291px;
+      top: 792px;
+      font-size: 16px;
+      transform: rotate(16deg);
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="studyMap1" class="studyMap">
+    <img id="studyImg1" class="absPos" src="Images/p661_001.jpg">
+    <p id="Austria" class="absPos mapText">AUSTRIA-HUNGARY</p>
+    <p id="Belgium" class="absPos mapText">BELG.</p>
+    <p id="Berlin" class="absPos mapText">Berlin</p>
+    <p id="France" class="absPos mapText">FRANCE</p>
+    <p id="Germany" class="absPos mapText">GERMANY</p>
+    <p id="GreatB" class="absPos mapText">GREAT BRITAIN</p>
+    <p id="London" class="absPos mapText">London</p>
+    <p id="Norway" class="absPos mapText">NORWAY</p>
+    <p id="Paris" class="absPos mapText">Paris</p>
+    <p id="Spain" class="absPos mapText">SPAIN</p>
+  </div>
+</body>
+</html>
