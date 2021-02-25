@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz 22 Map</title>
+  
+  <style>
+    .studyMap {
+      border: 3px solid;
+      margin-top: 0px;
+      margin-bottom: 5px;
+      position: relative;
+    }
+    #studyMap1 {
+      width: 1234px;
+      height: 957px;
+    }
+    #studyMap2 {
+      width: 952px;
+      height: 789px;
+    }
+    .absPos {
+      position: absolute;
+    }
+    .mapText {
+      font-family: sans-serif;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 28px;
+      user-select: all;
+      cursor: pointer;
+      backdrop-filter: blur(1.75px);
+      -webkit-backdrop-filter: blur(1.75px);
+      -webkit-text-stroke: 0.2px white;
+    }
+    
+    /* StudyMap1: Map from page 707 */
+    #Black {
+      left: 1113px;
+      top: 328px;
+      font-size: 36px;
+      transform: rotate(-10deg);
+      letter-spacing: 7px;
+      font-style: italic;
+    }
+    #Bulgaria {
+      left: 655px;
+      top: 441px;
+      font-size: 28px;
+      transform: rotate(-5deg);
+      letter-spacing: 2px;
+      font-style: italic;
+    }
+    #Greece {
+      left: 545px;
+      top: 803px;
+      font-size: 30px;
+      transform: rotate(-1deg);
+      font-weight: bold;
+    }
+    #Montenegro {
+      left: 279px;
+      top: 508px;
+      font-size: 33px;
+      transform: rotate(1deg);
+      font-weight: bold;
+    }
+    #Romania {
+      left: 650px;
+      top: 265px;
+      font-size: 36px;
+      transform: rotate(-4deg);
+      letter-spacing: 4px;
+      font-weight: bold;
+    }
+    #Serbia {
+      left: 444px;
+      top: 343px;
+      font-size: 32px;
+      font-weight: bold;
+    }
+    
+    /* StudyMap2: Smaller map from page 707*/
+    #_Austria {
+      left: 244px;
+      top: 159px;
+      font-size: 27px;
+      font-weight: bold;
+    }
+    #_Black {
+      left: 778px;
+      top: 275px;
+      font-size: 31px;
+      transform: rotate(-10deg);
+      word-spacing: -4px;
+      letter-spacing: 2px;
+      font-style: italic;
+    }
+    #_Bosnia {
+      left: 240px;
+      top: 268px;
+      font-size: 21px;
+      width: 120px;
+      text-align: center;
+      line-height: 1.05em;
+    }
+    #_Bulgaria {
+      left: 530px;
+      top: 326px;
+      font-size: 21px;
+      transform: rotate(-2deg);
+    }
+    #_Constantinople {
+      left: 708px;
+      top: 427px;
+      font-size: 24px;
+      transform: rotate(-8deg);
+      font-weight: bold;
+    }
+    #_Greece {
+      left: 434px;
+      top: 579px;
+      font-size: 28px;
+      letter-spacing: -3px;
+    }
+    #_Montenegro {
+      left: 193px;
+      top: 393px;
+      font-size: 23px;
+      transform: rotate(2deg);
+      letter-spacing: -0.75px;
+      font-weight: bold;
+
+    }
+    #_Romania {
+      left: 505px;
+      top: 259px;
+      font-size: 26px;
+      transform: rotate(-4deg);
+      letter-spacing: 3px;
+    }
+    #_Russia {
+      left: 701px;
+      top: 110px;
+      font-size: 26px;
+      transform: rotate(-9deg);
+      letter-spacing: 2px;
+    }
+    #_Serbia {
+      left: 381px;
+      top: 309px;
+      font-size: 26px;
+      transform: rotate(31deg);
+      letter-spacing: -1px;
+    }
+  </style>
+</head>
+
+<body>
+  <p style="font-family: sans-serif; font-size: 24px; user-select: all;">Large map on Page 707</p>
+  <div id="studyMap1" class="studyMap">
+    <img id="studyImg1" class="absPos" src="Images/p707_001.png">
+    <p id="Black" class="absPos mapText">Black Sea</p>
+    <p id="Bulgaria" class="absPos mapText">BULGARIANS</p>
+    <p id="Greece" class="absPos mapText">GREECE</p>
+    <p id="Montenegro" class="absPos mapText">MONT.</p>
+    <p id="Romania" class="absPos mapText">ROMANIA</p>
+    <p id="Serbia" class="absPos mapText">SERBIA</p>
+  </div>
+  
+  <p style="font-family: sans-serif; font-size: 24px; user-select: all;">Small map on Page 707</p>
+  <div id="studyMap2" class="studyMap">
+    <img id="studyImg2" class="absPos" src="Images/Layer 1.png">
+    <p id="_Austria" class="absPos mapText">AUSTRIA-HUNGARY</p>
+    <p id="_Black" class="absPos mapText">Black Sea</p>
+    <p id="_Bosnia" class="absPos mapText">Bosnia- Herzegovina</p>
+    <p id="_Bulgaria" class="absPos mapText">Bulgaria</p>
+    <p id="_Constantinople" class="absPos mapText">Constantinople</p>
+    <p id="_Greece" class="absPos mapText">GREECE</p>
+    <p id="_Montenegro" class="absPos mapText">MONTENEGRO</p>
+    <p id="_Romania" class="absPos mapText">ROMANIA</p>
+    <p id="_Russia" class="absPos mapText">RUSSIA</p>
+    <p id="_Serbia" class="absPos mapText">SERBIA</p>
+  </div>
+  
+</body>
+</html>
