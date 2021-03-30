@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz 26 Map</title>
+  
+  <style>
+    .studyMap {
+      border: 3px solid;
+      margin-top: 0px;
+      margin-bottom: 5px;
+      position: relative;
+    }
+    #studyMap1 { 
+      width: 673px;
+      height: 451px;
+    }
+    #studyMap2 {
+      width: 811px;
+      height: 505px;
+    }
+    #studyMap3 {
+      width: 922px;
+      height: 616px;
+    }
+    
+    .absPos {
+      position: absolute;
+    }
+    .mapText {
+      font-family: sans-serif;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 28px;
+      user-select: all;
+      cursor: pointer;
+      backdrop-filter: blur(1.5px);
+      -webkit-backdrop-filter: blur(1.5px);
+      -webkit-text-stroke: 0.125px white;
+    }
+    
+    /* StudyMap1: Map from page 817 */
+    #Alsace {
+      left: 201px;
+      top: 182px;
+      font-size: 12px;
+      transform: rotate(9deg);
+      letter-spacing: -0.1px;
+      width: 68px;
+      text-align: right;
+      line-height: 10.4px;
+    }
+    #Belgium {
+      left: 216px;
+      top: 132px;
+      font-size: 11px;
+      transform: rotate(10deg);
+      font-weight: bold;
+    }
+    #Sarajevo {
+      left: 397px;
+      top: 284px;
+      font-size: 11px;
+    }
+    
+    /* StudyMap2: Map from page 823*/
+    #M2_Belgium {
+      left: 279px;
+      top: 166px;
+      font-size: 12px;
+      transform: rotate(7deg);
+      font-weight: bold;
+    }
+    #M2_Caporetto {
+      left: 444px;
+      top: 296px;
+      font-size: 12px;
+    }
+    #M2_Gallipoli {
+      left: 653px;
+      top: 437px;
+      font-size: 12px;
+      transform: rotate(-6deg);
+      letter-spacing: 0.2px;
+    }
+    #M2_Marne {
+      left: 218px;
+      top: 212px;
+      font-size: 12px;
+      transform: rotate(8deg);
+    }
+    #M2_Tennenberg {
+      left: 482px;
+      top: 90px;
+      font-size: 11px;
+      transform: rotate(-1deg);
+      letter-spacing: 0.3px;
+    }
+    #M2_Verdun {
+      left: 311px;
+      top: 209px;
+      font-size: 12px;
+      transform: rotate(6deg);
+      letter-spacing: -0.1px;
+    }
+    
+    /* StudyMap3: Map from page 837*/
+    #M3_Alsace {
+      left: 260px;
+      top: 258px;
+      font-size: 19px;
+      transform: rotate(5deg);
+      width: 83px;
+      text-align: right;
+      font-weight: bold;
+    }
+    #M3_Poland {
+      left: 604px;
+      top: 140px;
+      font-size: 25px;
+      transform: rotate(-8deg);
+      letter-spacing: 1.1px;
+      font-weight: bold;
+    }
+    #M3_Yugoslavia {
+      left: 544px;
+      top: 381px;
+      font-size: 20px;
+      transform: rotate(-6deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h2>European Alliances and Military Build-Up, 1914 (Page 817)</h2>
+    <div id="studyMap1" class="studyMap">
+      <img id="studyImg1" class="absPos" src="Images/p817_001.jpg">
+      <p id="Alsace" class="absPos mapText">Alsace-Lorraine</p>
+      <p id="Belgium" class="absPos mapText">BELGIUM</p>
+      <p id="Sarajevo" class="absPos mapText">Sarajevo</p>
+    </div>
+    <br>
+  </div>
+  
+  <div>
+    <h2>The Western Front and the Eastern Front, 1914-1918 (Page 823)</h2>
+    <div id="studyMap2" class="studyMap">
+      <img id="studyImg2" class="absPos" src="Images/p823_001.jpg">
+      <p id="M2_Belgium" class="absPos mapText">BELG.</p>
+      <p id="M2_Caporetto" class="absPos mapText">Caporetto</p>
+      <p id="M2_Gallipoli" class="absPos mapText">Gallipoli</p>
+      <p id="M2_Marne" class="absPos mapText">Marne</p>
+      <p id="M2_Tennenberg" class="absPos mapText">Tannenberg</p>
+      <p id="M2_Verdun" class="absPos mapText">Verdun</p>
+    </div>
+    <br>
+  </div>
+  
+  <div>
+    <h2>Europe, 1920 (Page 837)</h2>
+    <div id="studyMap3" class="studyMap">
+      <img id="studyImg3" class="absPos" src="Images/p837_001.png">
+      <p id="M3_Alsace" class="absPos mapText">Alsace-Lorraine</p>
+      <p id="M3_Poland" class="absPos mapText">POLAND</p>
+      <p id="M3_Yugoslavia" class="absPos mapText">YUGOSLAVIA</p>
+    </div>
+    <br>
+  </div>
+  
+</body>
+</html>
