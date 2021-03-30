@@ -57,13 +57,13 @@ var qAnsArray = [
 
 // This text is displayed next to "Selected Location: " when the associated location is selected. The intention is to assist the student in finding the location on the map.
 var lTextArray = [
-  /* A. */ "A is a ",
-  /* B. */ "B is a ",
-  /* C. */ "C is a ",
-  /* D. */ "D is a ",
-  /* E. */ "E is a ",
-  /* F. */ "F is a ",
-  /* G. */ "G is a ",
-  /* H. */ "H is a ",
-  /* I. */ "I is a ",
-  /* J. */ "J is a "];
+  /* A. */ "A is a city in the northeast portion of the map.",
+  /* B. */ "B is a city in the northwest portion of the map.",
+  /* C. */ "C is a \"French Department\" (similar to a county) in the western portion of the map.",
+  /* D. */ "D is a city in the southeast portion of the map. It is southeast of city H and in region J.",
+  /* E. */ "E is a city near the southeast corner of the map. It is the location that is furthest southeast.",
+  /* F. */ "F is a region in the northwest portion of the map. It is north of city B.",
+  /* G. */ "G is a region in the northwest portion of the map. It is east of city B.",
+  /* H. */ "H is a city that is slightly southeast of the map's center. It is in region J.",
+  /* I. */ "I is a region in the northeast portion of the map. It is south of city A.",
+  /* J. */ "J is a region in the southeast portion of the map. It contains cities D and H."];
