@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="toi.css">
+  <title>TextOnImage</title>
+</head>
+
+<body>
+
+<!-- This is a tool that I made for placing and modifying text over map images. It presents a list of the CSS options used for the text items. -->
+
+<!-- This is where the map image and the text from the locItem objects will be displayed. -->
+<div id="workspace">
+  <img id="canvasImage" src="Images/p863_001.jpg">
+</div>
+
+<!-- This small section is only used for creating locItem objects and updating the 'elementList' <ol> at the bottom of the page. -->
+<div id="controlArea">
+  <input type="text" id="userInput" onfocus="this.value=''">Input here</input>
+  <button id="inputSubmit" onclick="newPElmnt()">Submit</button>
+  <button onclick="updateList()">Update</button>
+</div>
+
+<!-- This area is where the active locItem object can be removed and the css options can be manipulated. -->
+<div id="selectedPInfo">
+  <p>Selected: <span id="selText"></span></p>
+  <!-- Delete the active locItem object and remove its traces -->
+  <button onclick="delSelected()">Remove</button>
+  
+  <br>
+  <!-- Toggle-able options -->
+  <button onclick="locArray[selLocIndex].toggleItalic()">toggleItalic()</button>
+  <button onclick="locArray[selLocIndex].toggleBold()">toggleBold()</button>
+  <button onclick="locArray[selLocIndex].toggleBlur()">toggleBlur()</button>
+  
+  <br>
+  <!-- Modifying the 'transform: rotate(#deg);' attribute -->
+  <p style="display:inline-block; margin-block:4px">Rotate: </p>
+  <button onclick="locArray[selLocIndex].incRotate(-10)">-10</button>
+  <button onclick="locArray[selLocIndex].incRotate(-1)">-1</button>
+  <button onclick="locArray[selLocIndex].incRotate(1)">+1</button>
+  <button onclick="locArray[selLocIndex].incRotate(10)">+10</button>
+  
+  <br>
+  <!-- Modifying the 'font-size: #px;' attribute -->
+  <p style="display:inline-block; margin-block:4px">FontSize: </p>
+  <button onclick="locArray[selLocIndex].incFontSize(-10)">-10</button>
+  <button onclick="locArray[selLocIndex].incFontSize(-1)">-1</button>
+  <button onclick="locArray[selLocIndex].incFontSize(1)">+1</button>
+  <button onclick="locArray[selLocIndex].incFontSize(10)">+10</button>
+  
+  <br>
+  <!-- Modifying the 'word-spacing: #px;' attribute -->
+  <p style="display:inline-block; margin-block:4px">WordSpacing: </p>
+  <button onclick="locArray[selLocIndex].incWordSpacing(-1)">-1</button>
+  <button onclick="locArray[selLocIndex].incWordSpacing(-0.1)">-0.1</button>
+  <button onclick="locArray[selLocIndex].incWordSpacing(0.1)">+0.1</button>
+  <button onclick="locArray[selLocIndex].incWordSpacing(1)">+1</button>
+  
+  <br>
+  <!-- Modifying the 'letter-spacing: #px;' attribute -->
+  <p style="display:inline-block; margin-block:4px">Letter Spacing: </p>
+  <button onclick="locArray[selLocIndex].incLetterSpacing(-1)">-1</button>
+  <button onclick="locArray[selLocIndex].incLetterSpacing(-0.1)">-0.1</button>
+  <button onclick="locArray[selLocIndex].incLetterSpacing(0.1)">+0.1</button>
+  <button onclick="locArray[selLocIndex].incLetterSpacing(1)">+1</button>
+  
+  <br>
+  <!-- Modifying the 'width: #px;' attribute; starts at 50px -->
+  <p style="display:inline-block; margin-block:4px">Width: </p>
+  <button onclick="locArray[selLocIndex].incWidth(-10)">-10</button>
+  <button onclick="locArray[selLocIndex].incWidth(-1)">-1</button>
+  <button onclick="locArray[selLocIndex].incWidth(1)">+1</button>
+  <button onclick="locArray[selLocIndex].incWidth(10)">+10</button>
+  <button onclick="locArray[selLocIndex].delWidth()">Delete</button>
+  
+  <br>
+  <!-- Modifying the 'line-height: #px;' attribute -->
+  <p style="display:inline-block; margin-block:4px">Line-Height: </p>
+  <button onclick="locArray[selLocIndex].incLineHeight(-1)">-1</button>
+  <button onclick="locArray[selLocIndex].incLineHeight(-0.1)">-0.1</button>
+  <button onclick="locArray[selLocIndex].incLineHeight(0.1)">+0.1</button>
+  <button onclick="locArray[selLocIndex].incLineHeight(1)">+1</button>
+  <button onclick="locArray[selLocIndex].delLineHeight()">Delete</button>
+  
+  <br>
+  <!-- Modifying the 'text-align: #;' attribute -->
+  <p style="display:inline-block; margin-block:4px">Text-Align: </p>
+  <button onclick="locArray[selLocIndex].textAlignLeft()">Left</button>
+  <button onclick="locArray[selLocIndex].textAlignCenter()">Center</button>
+  <button onclick="locArray[selLocIndex].textAlignRight()">Right</button>
+  <button onclick="locArray[selLocIndex].delTextAlign()">Delete</button>
+  
+</div>
+
+<!-- This list is where the CSS options will be displayed. -->
+<div id="elementInfo">
+  <ol id="elementList">
+  </ol>
+</div>
+
+</body>
+<script src="toi.js"></script>
+<script src="locItem.js"></script>
+</html>
