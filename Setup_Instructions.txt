@@ -56,6 +56,8 @@ Essentially, the purpose of this webpage is to make the textbook's map(s) availa
 I might change this later to involve both an HTML file and a CSS file, but for now, I do the styling in the HTML file's <style> section.
 There is a template file named "quiz_0_maps.html" in the "Quiz_0 (Template)" folder for you to start from. If you have any difficulty creating this webpage, please reference the quiz_#_maps.html files from the other quizzes.
 
+The html file in the TextOnImage folder can be a great tool for making this reference page.
+
 Step 1: Create a <p> element for the text that you want to be over the image.
   - Example: <p id="Location1" class="absPos mapText">Map's text for Location 1</p>
     - The map's text would replace the "Map's text for Location 1"
