@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz 30 Map</title>
+  
+  <style>
+    .studyMap {
+      border: 3px solid;
+      margin-top: 0px;
+      margin-bottom: 5px;
+      position: relative;
+    }
+    #studyMap1 {
+      width: 1024px;
+      height: 528px;
+    }
+    #studyMap2 {
+      width: 1024px;
+      height: 774px;
+    }
+    .absPos {
+      position: absolute;
+    }
+    .mapText {
+      font-family: sans-serif;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      user-select: all;
+      cursor: pointer;
+      backdrop-filter: blur(1.5px);
+      -webkit-backdrop-filter: blur(1.5px);
+      -webkit-text-stroke: 0.5px white;
+    }
+    
+    /* StudyMap1: Map from page 969 */
+    #Cuba {
+      left: 331px;
+      top: 173px;
+      font-size: 13px;
+      letter-spacing: -0.4px;
+      font-weight: bold;
+    }
+    #Iran {
+      left: 641px;
+      top: 143px;
+      font-size: 13px;
+      letter-spacing: -0.2px;
+      font-weight: bold;
+    }
+    #Korea {
+      left: 877px;
+      top: 166px;
+      font-size: 12px;
+      letter-spacing: -0.1px;
+      font-weight: bold;
+    }
+    #Soviet {
+      left: 659px;
+      top: 70px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    #Turkey {
+      left: 584px;
+      top: 92px;
+      font-size: 13px;
+      letter-spacing: -0.8px;
+      font-weight: bold;
+    }
+    #United {
+      left: 223px;
+      top: 116px;
+      font-size: 16px;
+      letter-spacing: -0.4px;
+      width: 50px;
+      text-align: center;
+      font-weight: bold;
+    }
+    
+    /* StudyMap2: Map from page 969*/
+    #France_2 {
+      left: 291px;
+      top: 482px;
+      font-size: 19px;
+      transform: rotate(13deg);
+      letter-spacing: 0.5px;
+      font-weight: bold;
+    }
+    #Soviet_2 {
+      left: 706px;
+      top: 364px;
+      font-size: 22px;
+      transform: rotate(-13deg);
+      letter-spacing: 2.8px;
+      word-spacing: 4.4px;
+      font-weight: bold;
+    }
+    #Turkey_2 {
+      left: 753px;
+      top: 649px;
+      font-size: 19px;
+      transform: rotate(-11deg);
+      letter-spacing: 2.5px;
+      font-weight: bold;
+    }
+    #United_2 {
+      left: 275px;
+      top: 333px;
+      font-size: 16px;
+      transform: rotate(17deg);
+      width: 80px;
+      text-align: center;
+      line-height: 28.2px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <p style="font-size: 28px">Three locations in this quiz are not included on any maps in chapter 30 of the textbook. They are Australia, Canada, and Great Britain.</p>
+  
+  <h2>The Cold War World, 1977</h2>
+  <div id="studyMap1" class="studyMap">
+    <img id="studyImg1" class="absPos" src="Images/p969_001.jpg">
+    <p id="Cuba" class="absPos mapText">CUBA</p>
+    <p id="Iran" class="absPos mapText">IRAN</p>
+    <p id="Korea" class="absPos mapText">KOREA</p>
+    <p id="Soviet" class="absPos mapText">SOVIET UNION</p>
+    <p id="Turkey" class="absPos mapText">TURKEY</p>
+    <p id="United" class="absPos mapText">UNITED STATES</p>
+  </div>
+
+  <h2>The Cold War World, 1977; Closer look at Europe</h2>
+  <div id="studyMap2" class="studyMap">
+    <img id="studyImg2" class="absPos" src="Images/p969_002.jpg">
+    <p id="France_2" class="absPos mapText">FRANCE</p>
+    <p id="Soviet_2" class="absPos mapText">SOVIET UNION</p>
+    <p id="Turkey_2" class="absPos mapText">TURKEY</p>
+    <p id="United_2" class="absPos mapText">UNITED KINGDOM</p>
+  </div>
+  
+</body>
+</html>

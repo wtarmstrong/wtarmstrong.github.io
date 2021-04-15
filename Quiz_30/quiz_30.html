@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Wilson Armstrong">
+  
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="../quizzes.css">
+  
+  <!-- Title is changed by "quizzes.js" to the tabTitle variable in "quiz_#.js". -->
+  <title id="pageTitle">Map</title>
+ </head>
+
+ <body>
+  <!-- This header is changed by "quizzes.js" to the text in the variable quizHeader in "quiz_#.js". -->
+  <h1 id="quizName">Geography Quiz</h1>
+  
+  <p>Instructions</p>
+  <ul>
+    <li>Press 1 through 9 and 0 to select a question, 0 being question 10</li>
+    <li>Press A through J to select a location</li>
+    <li>Press Enter to pair the selected question with the selected location</li>
+  </ul>
+  
+  <!-- This div holds the map image and the overlaying image of the selected location. -->
+  <!-- imageWrapper class is general; mapSizer is quiz specific -->
+  <div id="mapContainer" class="imageWrapper mapSizer">
+    <img id="baseMap" class="overlayImage" src="Images/Base Map.png" alt="Base Map" usemap="#imgClick">
+    <img id="selLoc" class="overlayImage" src="" alt="" usemap="#imgClick">
+  </div>
+  
+  <!-- This map is used to make the letters on the quiz's map interactive. The dimensions of the rectangles are set by mapDimension in "quiz_#.js". -->
+  <map name="imgClick" style="cursor: pointer;">
+    <area id="map0" shape="rect" onclick="mapClick('A')">
+    <area id="map1" shape="rect" onclick="mapClick('B')">
+    <area id="map2" shape="rect" onclick="mapClick('C')">
+    <area id="map3" shape="rect" onclick="mapClick('D')">
+    <area id="map4" shape="rect" onclick="mapClick('E')">
+    <area id="map5" shape="rect" onclick="mapClick('F')">
+    <area id="map6" shape="rect" onclick="mapClick('G')">
+    <area id="map7" shape="rect" onclick="mapClick('H')">
+    <area id="map8" shape="rect" onclick="mapClick('I')">
+    <area id="map9" shape="rect" onclick="mapClick('J')">
+  </map>
+  
+  <!-- The text here will change to display the text associated with whichever question/location is selected. The easySelect class is used to select the element's text with one click to aid with using a screen-reader program. -->
+  <p class="easySelect"><span class="bolded">Selected Question: </span><span id="selQText">No question is selected</span></p>
+  <p class="easySelect"><span class="bolded">Selected Location: </span><span id="selLText">No location is selected</span></p>
+  
+  <!-- This button allows the user to call the pairSelected function without pressing the Enter key. -->
+  <button onclick="pairSelected()">Pair Selections</button>
+  
+  <!-- This ul holds the blanks for each question. The li elements are created in the general JS file under the comment "Creating list for student's answers".  -->
+  <ul id="ansList">
+  </ul>
+ 
+ <!-- Link to individual JS file; this is where most of the changes are made for each quiz. -->
+ <script src="quiz_30.js"></script> <!-- Change the # to the quiz number -->
+ <!-- Link to general JS file; this is where the actual functionality of the quizzes is located. -->
+ <script src="../quizzes.js"></script>
+ </body>
+</html>
